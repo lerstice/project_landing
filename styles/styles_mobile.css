@@ -1,0 +1,340 @@
+.container,
+.topblock-textblock {
+	width: 95%;
+	max-width: 95%;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.header__navigation,
+.header__btn,
+.projects-container-menu,
+.projects-container-right,
+.dots,
+.request,
+.form__button,
+.realized-projects__list,
+.realized-projects__images,
+.clients__title,
+.clients__persons,
+.footer,
+.contacts__overlay,
+.topblock-overlay__second,
+.contacts__map {
+	display: none;
+}
+
+.topblock-textblock,
+.form__input__name,
+.form__input__phone,
+.first-checkbox {
+	margin: 0 auto;
+}
+
+.form__input::placeholder,
+.request__input::placeholder,
+.clients__input::placeholder,
+.clients__input__long::placeholder {
+	font-family: NunitoSans;
+}
+
+.topblock {
+	padding-top: 85px;
+}
+
+.topblock-title {
+	font-size: 23px;
+	line-height: 1.3;
+}
+
+.topblock-text {
+	font-size: 14px;
+	line-height: 1.4;
+	margin-top: 24px;
+	margin-bottom: 55px;
+	text-align: left;
+	width: 100%;
+}
+
+.button {
+	width: 100%;
+	margin-bottom: 26px;
+}
+
+.button__application {
+	margin-bottom: 61px;
+}
+
+.projects {
+	background-color: #131313;
+}
+
+.projects-container__title {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 36px;
+}
+
+.projects-container-left {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.projects__text {
+	font-size: 11px;
+	line-height: 1.5;
+	text-align: center;
+	margin-bottom: 76px;
+	margin-top: 37px;
+	width: 100%;
+}
+
+.projects__list {
+	width: 100%;
+}
+
+.subtitle__projects {
+	font-size: 14px;
+}
+
+.projects__mobile__image {
+	display: block;
+	position: relative;
+	margin-bottom: 37px;
+}
+
+.mobile__image {
+	width: 100%;
+}
+
+.mobile__arrow {
+	position: absolute;
+	top: 45%;
+	left: 14px;
+	cursor: pointer;
+	z-index: 10;
+}
+.mobile__arrow__right {
+	left: 85%;
+}
+
+.video-sec {
+	background-color: #131313;
+	margin-top: -345px;
+}
+
+.video-ctrl {
+	width: 95%;
+	margin-top: 40px;
+}
+
+.video-ctrl__img {
+	width: 100%;
+}
+
+.video-ctrl__icon {
+	width: 20%;
+}
+
+.video-ctrl::before {
+	width: 100%;
+}
+
+.video__text {
+	max-width: 100%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 170%;
+	text-align: center;
+	color: #ffffff;
+	margin: 0 auto;
+}
+
+.after-video-line {
+	margin-top: 28px;
+	margin-bottom: 21px;
+}
+
+.types-of-repair {
+	width: 100%;
+}
+
+.types-of-repair__icon {
+	margin-bottom: 40px;
+}
+
+.types {
+	display: flex;
+	flex-direction: column;
+}
+
+.types__block {
+	margin-bottom: 200px;
+}
+
+.types_image {
+	max-width: 100%;
+}
+
+.types__block__text {
+	margin-top: -142px;
+	margin-left: 0px;
+	width: 80%;
+	height: 241px;
+}
+
+.types__block__button {
+	width: 65%;
+	margin-left: 0px;
+	margin-top: 90px;
+	width: 190px;
+	height: 50px;
+}
+
+.types-of-repair__button-text {
+	font-size: 15px;
+	line-height: 138%;
+}
+
+.form {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.form__box {
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.input__label {
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 63px;
+}
+
+.form__input {
+	background-color: #131313;
+	border-bottom: 1px #ffffff solid;
+	color: #ffffff;
+	width: 100%;
+}
+
+.form__input::placeholder {
+	color: #ffffff;
+}
+
+.mobile_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form__button__mobile {
+	width: 90%;
+	height: 51px;
+	margin-top: -26px;
+	background-color: #e3b873;
+	vertical-align: middle;
+	text-transform: uppercase;
+	border: none;
+	color: #ffffff;
+}
+
+.first-checkbox {
+	margin-top: 27px;
+	padding-bottom: 62px;
+}
+
+.first-checkbox__text {
+	color: #ffffff;
+}
+
+.types-of-repair {
+	width: 95%;
+}
+
+.types-of-repair__title {
+	margin: 0 auto;
+	margin-top: 58px;
+}
+
+.types-of-repair__list {
+	line-height: 170%;
+}
+
+.realized-projects {
+	background-image: none;
+	margin: 0 auto;
+	background-color: #ffffff;
+	position: static;
+	height: auto;
+}
+
+.realized-projects__title {
+	margin: 0 auto 38px auto;
+	text-align: center;
+	font-size: 22px;
+}
+
+.realized-projects__img__mobile {
+	display: block;
+	position: relative;
+	margin-top: 38px;
+	z-index: 0;
+}
+
+.realized-projects__container {
+	margin-bottom: -121px;
+}
+
+.realized-projects__img {
+	width: 100%;
+}
+
+.clients {
+	background-color: #131313;
+	padding-top: 133px;
+}
+
+.clients__form {
+	background-color: #131313;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.clients__form__container__line {
+	width: 95%;
+}
+
+.clients__input,
+.contacts {
+	background-color: #131313;
+	background-image: none;
+}
+
+.clients__input__long,
+.clients__form__button {
+	width: 100%;
+}
+
+.third-checkbox {
+	margin-left: 0px;
+}
+
+.mobile__map {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.contacts__title {
+	padding-top: 42px;
+}
+
+.contacts__icons {
+	padding-bottom: 49px;
+}
+
+.contacts {
+	min-height: auto;
+}
