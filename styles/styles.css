@@ -506,7 +506,7 @@ body {
 }
 
 .fake::before {
-	content: url(/icons/check_mark.svg);
+	content: url(../icons/check_mark.svg);
 	opacity: 0;
 	transition: 0.2s;
 }
