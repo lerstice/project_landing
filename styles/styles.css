@@ -211,7 +211,8 @@ body {
 }
 
 .projects {
-	height: 1074px;
+	/* height: 1074px; */
+	padding-bottom: 400px;
 	background-color: #131313;
 }
 

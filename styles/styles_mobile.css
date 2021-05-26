@@ -67,6 +67,7 @@
 
 .projects {
 	background-color: #131313;
+	padding-bottom: 20px;
 }
 
 .projects-container__title {
@@ -120,7 +121,7 @@
 
 .video-sec {
 	background-color: #131313;
-	margin-top: -345px;
+	margin-top: 0px;
 }
 
 .video-ctrl {
@@ -337,4 +338,15 @@
 
 .contacts {
 	min-height: auto;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.mobile__arrow__right {
+		left: 92%;
+	}
+	.types_image {
+		width: 85%;
+	}
+	.video-ctrl {
+	}
 }
