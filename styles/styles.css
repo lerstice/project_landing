@@ -360,7 +360,7 @@ body {
 }
 
 .slider__dots-item {
-	display: inline-block;
+	/* display: inline-block; */
 	width: 10px;
 	height: 10px;
 	background: rgba(255, 255, 255, 0.3);
