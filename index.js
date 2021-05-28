@@ -1,9 +1,9 @@
 let images = [{
-  url: "/images/slider_01.jpg",
+  url: "./images/slider_01.jpg",
 }, {
-  url: "/images/slider_02.jpg",
+  url: "./images/slider_02.jpg",
 }, {
-  url: "/images/slider_03.jpg",
+  url: "./images/slider_03.jpg",
 }];
 
 
