@@ -248,10 +248,12 @@ body {
 	text-decoration: none;
 }
 
-.projects-menu__link:hover {
+.projects-menu__link:hover,
+.projects-menu__link.active {
 	color: #e3b873;
 	padding-bottom: 7px;
 	border-bottom: 1px #e3b873 solid;
+	cursor: pointer;
 }
 
 .slider__images {
