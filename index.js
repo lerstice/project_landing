@@ -26,7 +26,9 @@ function initSlider() {
   let sliderArrows = document.querySelector(".dots");
   let sliderDots = document.querySelector(".slider__dots");
   let sliderLinks = document.querySelector(".projects-menu")
-  
+
+  let mobileImages = document.querySelector(".mobile__images");
+  let mobileArrows = document.querySelector(".projects__mobile__image");  
 
   initImages();
   initArrows();
@@ -38,7 +40,10 @@ function initSlider() {
   function initImages() {
     images.forEach((image, index) => {
       let imageDiv = `<div class="image n${index} ${index === 0 ? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
+      let mobileImageDiv = `<div class="mobile__image image n${index} ${index === 0 ? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
+    
       sliderImages.innerHTML += imageDiv;
+      mobileImages.innerHTML += mobileImageDiv;
     });
   }
 
@@ -48,6 +53,19 @@ function initSlider() {
         let curNumber = +sliderImages.querySelector(".active").dataset.index;
         let nextNumber;
         if (arrow.classList.contains("left__arrow")) {
+          nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
+        } else {
+          nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
+        }
+        moveSlider(nextNumber);
+      });
+    });
+
+    mobileArrows.querySelectorAll(".mobile__arrow").forEach(arrow => {
+      arrow.addEventListener("click", function() {
+        let curNumber = +mobileImages.querySelector(".active").dataset.index;
+        let nextNumber;
+        if (arrow.classList.contains("mobile__arrow__right")) {
           nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
         } else {
           nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
@@ -87,6 +105,7 @@ function initSlider() {
         moveSlider(nextNumber);
       });
     });
+
   }
 
   function initItems() {
@@ -124,13 +143,12 @@ function initSlider() {
     sliderLinks.querySelector(".active").classList.remove("active");
     sliderLinks.querySelector(".n" + index).classList.add("active");
 
+    mobileImages.querySelector(".active").classList.remove("active");
+    mobileImages.querySelector(".n" + index).classList.add("active");
+
     changeItems(index);
   }
 
 }
 
 document.addEventListener("DOMContentLoaded", initSlider);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   initSlider();
-// });
