@@ -4,22 +4,18 @@ let images = [{
   city: "Rostov-on-Don<br />LCD admiral",
   area: "81 m<sup>2</sup>",
   time: "3.5 months",
-  cost: "Upon request",
-
 }, {
   url: "./images/slider_02.jpg",
   link: "Sochi Thieves",
-  city: "Sochi Thieves",
+  city: "Sochi<br />Thieves",
   area: "105 m<sup>2</sup>",
   time: "4 months",
-  cost: "Upon request",
 }, {
   url: "./images/slider_03.jpg",
   link: "Rostov-on-Don Patriotic",
-  city: "Rostov-on-Don Patriotic",
+  city: "Rostov-on-Don<br />Patriotic",
   area: "93 m<sup>2</sup>",
   time: "3 months",
-  cost: "Upon request",
 }];
 
 
@@ -30,13 +26,14 @@ function initSlider() {
   let sliderArrows = document.querySelector(".dots");
   let sliderDots = document.querySelector(".slider__dots");
   let sliderLinks = document.querySelector(".projects-menu")
-  let sliderCity = document.querySelector(".city__item")
+  
 
   initImages();
   initArrows();
   initDots();
   changeLinks();
-  changeCity();
+  initItems();
+  changeItems();
 
   function initImages() {
     images.forEach((image, index) => {
@@ -92,38 +89,42 @@ function initSlider() {
     });
   }
 
-  // function changeCity() {
-  //   images.forEach((image, index) => {
-  //     let city = `<span class="projects__item__text n${index} ${index === 0 ? "active" : ""}" data-index="${index}">${images[index].city}</span>`;
-  //     sliderCity.innerHTML = city;
-  //   })
+  function initItems() {
+    let sliderCity = document.querySelector(".city__item")
+    let sliderArea = document.querySelector(".area__item")
+    let sliderTime = document.querySelector(".time__item")
 
-  //   sliderCity.querySelectorAll(".projects__item__text").forEach(city => {
-  //     city.addEventListener("click", function() {
-  //       let curNumber = +sliderImages.querySelector(".active").dataset.index;
-  //       let nextNumber;
-  //       if (city.classList.contains("active")) {
-  //         nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
-  //       } else {
-  //         nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
-  //       }
-  //       moveSlider(nextNumber);
-  //     });
-  //   });
-  // }
+    let cityDiv = `<span class="projects__item__text city">${images[0].city}</span>`;
+    let areaDiv = `<span class="projects__item__text">${images[0].area}</span>`;
+    let timeDiv = `<span class="projects__item__text">${images[0].time}</span>`;
 
-  function moveSlider(num) {
+    sliderCity.innerHTML = cityDiv;
+    sliderArea.innerHTML = areaDiv;
+    sliderTime.innerHTML = timeDiv;
+  }
+
+  function changeItems(index) {
+    let city = document.querySelector(".city__item")
+    city.innerHTML = `<span class="projects__item__text">${images[index].city}</span>`;
+
+    let area = document.querySelector(".area__item")
+    area.innerHTML = `<span class="projects__item__text">${images[index].area}</span>`;
+
+    let time = document.querySelector(".time__item")
+    time.innerHTML = `<span class="projects__item__text">${images[index].time}</span>`;
+  }
+
+  function moveSlider(index) {
     sliderImages.querySelector(".active").classList.remove("active");
-    sliderImages.querySelector(".n" + num).classList.add("active");
+    sliderImages.querySelector(".n" + index).classList.add("active");
 
     sliderDots.querySelector(".active").classList.remove("active");
-    sliderDots.querySelector(".n" + num).classList.add("active");
+    sliderDots.querySelector(".n" + index).classList.add("active");
 
     sliderLinks.querySelector(".active").classList.remove("active");
-    sliderLinks.querySelector(".n" + num).classList.add("active");
+    sliderLinks.querySelector(".n" + index).classList.add("active");
 
-    sliderCity.querySelector(".active").classList.remove("active");
-    sliderCity.querySelector(".n" + num).classList.add("active");
+    changeItems(index);
   }
 
 }
