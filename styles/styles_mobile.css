@@ -104,14 +104,14 @@
 	margin-bottom: 37px;
 }
 
-.mobile__image {
+.mobile__images {
 	position: relative;
-	width: 90%;
-	height: 90%;
+	width: 340px;
+	height: 240px;
 }
 
-.mobile__image .image {
-	background-size: cover;
+.mobile__images .image {
+	background-size: contain;
 	background-position: center center;
 	width: 100%;
 	height: 100%;
@@ -122,8 +122,8 @@
 	transition: opacity 800ms ease;
 }
 
-.mobile__image .image.active {
-	opacity: 1;
+.mobile__images .image.active {
+	opacity: 10;
 }
 
 .mobile__arrow {
@@ -364,5 +364,9 @@
 	}
 	.types_image {
 		width: 85%;
+	}
+	.mobile__images {
+		width: 700px;
+		height: 500px;
 	}
 }

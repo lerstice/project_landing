@@ -40,7 +40,7 @@ function initSlider() {
   function initImages() {
     images.forEach((image, index) => {
       let imageDiv = `<div class="image n${index} ${index === 0 ? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
-      let mobileImageDiv = `<div class="mobile__image image n${index} ${index === 0 ? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
+      let mobileImageDiv = `<div class="image n${index} ${index === 0 ? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
     
       sliderImages.innerHTML += imageDiv;
       mobileImages.innerHTML += mobileImageDiv;
@@ -95,16 +95,22 @@ function initSlider() {
 
     sliderLinks.querySelectorAll(".projects-menu__link").forEach(link => {
       link.addEventListener("click", function() {
-        let curNumber = +sliderImages.querySelector(".active").dataset.index;
-        let nextNumber;
-        if (link.classList.contains("active")) {
-          nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
-        } else {
-          nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
-        }
-        moveSlider(nextNumber);
-      });
-    });
+        moveSlider(this.dataset.index);
+      })
+    })
+
+    // sliderLinks.querySelectorAll(".projects-menu__link").forEach(link => {
+    //   link.addEventListener("click", function() {
+    //     let curLink = +sliderImages.querySelector(".active").dataset.index;
+    //     let nextLink;
+    //     if (link.classList.contains("active")) {
+    //       nextLink = curLink === 0 ? images.length - 1 : curLink - 1;
+    //     } else {
+    //       nextLink = curLink === images.length - 1 ? 0 : curLink + 1;
+    //     }
+    //     moveSlider(nextLink);
+    //   });
+    // });
 
   }
 
