@@ -98,20 +98,6 @@ function initSlider() {
         moveSlider(this.dataset.index);
       })
     })
-
-    // sliderLinks.querySelectorAll(".projects-menu__link").forEach(link => {
-    //   link.addEventListener("click", function() {
-    //     let curLink = +sliderImages.querySelector(".active").dataset.index;
-    //     let nextLink;
-    //     if (link.classList.contains("active")) {
-    //       nextLink = curLink === 0 ? images.length - 1 : curLink - 1;
-    //     } else {
-    //       nextLink = curLink === images.length - 1 ? 0 : curLink + 1;
-    //     }
-    //     moveSlider(nextLink);
-    //   });
-    // });
-
   }
 
   function initItems() {
